@@ -46,3 +46,18 @@ function reverseArray(Array) {
     }
     return newArray
 }
+
+console.log(reverseArray(["1", "2", "3"])); // ["3", "2", "1"]
+
+function reverseArrayInPlace(arra) {
+    for (let i = 0; i < Math.floor(arra.length / 2); i++) {
+        let temp= arra[i]; 
+        arra[i] = arra[arra.length - 1 - i];
+        arra[arra.length - 1 -i] = temp;
+    }
+    return arra;
+}
+
+let arrayValue = [6, 7, 8, 9, 10] 
+reverseArrayInPlace(arrayValue)
+console.log(arrayValue); // returns [10, 9, 8, 7, 6]
